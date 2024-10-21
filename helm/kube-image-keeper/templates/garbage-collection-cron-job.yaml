@@ -6,7 +6,7 @@ apiVersion: batch/v1beta1
 {{- end }}
 kind: CronJob
 metadata:
-  name: {{ include "kube-image-keeper.fullname" . }}-registry-garbage-collection
+  name: {{ include "kube-image-keeper.fullname" . }}-rgc
   labels:
     {{- include "kube-image-keeper.garbage-collection-labels" . | nindent 4 }}
 spec:
